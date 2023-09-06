@@ -1,0 +1,6 @@
+[logger]
+path = "/home/User"
+filename = "ponto-menos.log"
+level = "DEBUG"
+maxSize = 1 #MB
+maxAge = 1 #MB

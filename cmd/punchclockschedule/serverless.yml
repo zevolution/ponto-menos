@@ -1,0 +1,38 @@
+useDotenv: true
+
+service: ponto-menos-service
+frameworkVersion: "3"
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-deployment-bucket
+
+package:
+  individually: true
+
+provider:
+  name: aws
+  runtime: provided.al2
+  architecture: x86_64
+  region: us-east-1
+  logRetentionInDays: 7
+  versionFunctions: false
+  deploymentBucket:
+    name: ${env:DEPLOYMENT_BUCKET}
+    serverSideEncryption: AES256
+
+functions:
+  punchclockschedule:
+    name: ponto-menos-${sls:stage}-punchclockschedule
+    handler: bootstrap
+    package:
+      artifact: ../../bin/punchclockschedule/bootstrap.zip
+    memorySize: 128
+    events:
+      - schedule:
+          method: scheduler
+          name: ponto-menos-job-scheduler-weekly-in-workhour
+          description: 'This schedule triggers an event weekly during business hours to clock in'
+          rate:
+            - cron(0 8,12,13,17 ? * MON-FRI *)
+          timezone: America/Sao_Paulo
