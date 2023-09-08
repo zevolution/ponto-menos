@@ -26,12 +26,12 @@ To use this application as a cloud native solution in AWS you need make deploy u
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Deploy
-To build this app, you'll need:
+To deploy this app, you'll need:
 1. Install [Serverless Framework](https://www.serverless.com/framework/docs/getting-started) globally using:
 ```bash
 npm install -g serverless
 ```
-2. Configure your [AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html). It's recommended that you use some credentials that have Administrator level privilege access, if you don't have something like this actualy, you can see the following [link](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/) about how to do this
+2. Configure your [AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html). It's recommended that you use some credentials that have Administrator level privilege access, if you don't have something like this actually, you can see the following [link](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/) about how to do this
 3. Build application using the previous topic ["Build"](#build)
 4. Make sure you are in the [punchclockschedule application directory](../punchclockschedule/)
 5. Create a `.env` file following the [.env.sample](.env.sample) and configure with your data

@@ -21,9 +21,9 @@ This module was designed to offer an interactive and efficient solution for punc
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Build
-To build the CLI, utilize the provided Makefile with the following command: make build-cli. This command accepts two parameters, namely, `os` and `arch`, which should be specified to target the desired operating system for CLI execution e.g:
+To build the CLI, use the provided Makefile with the following command: `make clean build-cli`. This command accepts two parameters called `os` and `arch`, which must be used in build for target OS correctly e.g:
 ```bash
-make os=darwin arch=arm64 build-cli
+make os=darwin arch=arm64 clean build-cli
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -79,7 +79,7 @@ Follow the diagram below:
 ![Cron](https://github.com/spring-projects/spring-boot/assets/36534847/302e65ea-05c7-4d67-a97c-f5def37f06b7)
 
 ### By-step
-1. First of all, you need compile the binary using the command `make build-cli`, don't forget to enter your `os` and `arch` correctly
+1. First of all, you need compile the binary using the command `make clean build-cli`, don't forget to enter your `os` and `arch` correctly
 2. If you use:
     1. Unix-based system: the following [link]() will give you an initial idea of how use `crontab` to do this
     2. Windows: I strongly recommended that you use WLS2 to perform all operations, otherwise, you can take a look at this related content about [how to use windows task scheduler](https://learn.microsoft.com/en-us/windows/win32/taskschd/using-the-task-scheduler)
