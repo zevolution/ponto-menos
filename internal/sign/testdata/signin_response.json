@@ -1,0 +1,11 @@
+{
+	"success": "Login efetuado com sucesso!",
+	"token": "token",
+	"client_id": "clientId",
+	"data": {
+		"login": "user@user.com.br",
+		"sign_in_count": 1285,
+		"last_sign_in_ip": "175.149.21.250",
+		"last_sign_in_at": 1692815760
+	}
+}
