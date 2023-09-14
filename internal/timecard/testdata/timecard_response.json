@@ -1,0 +1,9 @@
+{
+    "controller": "dummyController",
+    "action": "dummyAction",
+    "timestamp": "dummyTimestamp",
+    "uuid": "dummyUuid",
+    "current_user_id": "dummyCurrentUserId",
+    "remote_ip": "dummyRemoteIp",
+    "message_uid": "dummyMessageUid"
+}

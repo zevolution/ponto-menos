@@ -1,0 +1,40 @@
+{
+    "image": null,
+    "employee": {
+        "id": null,
+        "pin": null
+    },
+    "time_card": {
+        "latitude": 0,
+        "longitude": 0,
+        "address": "",
+        "accuracy": 1100,
+        "image": null,
+        "reference_id": null,
+        "original_latitude": "",
+        "original_longitude": "",
+        "original_address": "",
+        "location_edited": false,
+        "accuracy_method": null
+    },
+    "_path": "/registrar-ponto",
+    "_appVersion": "0.10.32",
+    "_device": {
+        "manufacturer": "null",
+        "model": "null",
+        "uuid": {
+            "success": "Login efetuado com sucesso!",
+            "token": "token",
+            "data": {
+                "email": "user@user.com.br",
+                "sign_in_count": 1285,
+                "last_sign_in_ip": "172.59.28.255",
+                "last_sign_in_at": 1692815760
+            },
+            "uuid": "bbfce251-a30b-4b13-88e8-2b331e2a37d9",
+            "authorization": "Bearer cgS1fidp0dsq1puS_BTxS3pM4spAvG-YcPongfaD4HddabiaIdskdbb",
+            "client_id": "clientId"
+        },
+        "version": "null"
+    }
+}
