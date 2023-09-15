@@ -81,7 +81,7 @@ Follow the diagram below:
 ### By-step
 1. First of all, you need compile the binary using the command `make clean build-cli`, don't forget to enter your `os` and `arch` correctly
 2. If you use:
-    1. Unix-based system: the following [link]() will give you an initial idea of how use `crontab` to do this
+    1. Unix-based system: the following [link](https://gist.github.com/zevolution/2a9448fdfc08fe3738708f76aa1a4e13) will give you an initial idea of how use `crontab` to do this
     2. Windows: I strongly recommended that you use WLS2 to perform all operations, otherwise, you can take a look at this related content about [how to use windows task scheduler](https://learn.microsoft.com/en-us/windows/win32/taskschd/using-the-task-scheduler)
 3. Enjoy!
 <p align="right">(<a href="#top">back to top</a>)</p>
