@@ -28,6 +28,7 @@ functions:
     package:
       artifact: ../../bin/punchclockschedule/bootstrap.zip
     memorySize: 128
+    timeout: 10
     events:
       - schedule:
           method: scheduler
