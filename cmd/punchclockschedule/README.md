@@ -34,10 +34,15 @@ npm install -g serverless
 2. Configure your [AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html). It's recommended that you use some credentials that have Administrator level privilege access, if you don't have something like this actually, you can see the following [link](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/) about how to do this
 3. Build application using the previous topic ["Build"](#build)
 4. Make sure you are in the [punchclockschedule application directory](../punchclockschedule/)
-5. Create a `.env` file following the [.env.sample](.env.sample) and configure with your data
-6. Use the command `sls deploy --verbose`
-7. Wait until all resources are created
-8. Enjoy!
+5. Install all plugins used in `serverless.yml` with `serverless plugin install -n plugin-name` e.g.:
+```bash
+serverless plugin install -n serverless-dotenv-plugin
+serverless plugin install -n serverless-deployment-bucket
+```
+6. Create a `.env` file following the [.env.sample](.env.sample) and configure with your data
+7. Use the command `sls deploy --verbose`
+8. Wait until all resources are created
+9. Enjoy!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Disclaimer
