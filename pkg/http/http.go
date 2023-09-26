@@ -17,7 +17,7 @@ type (
 	}
 
 	PontoMenosHTTPClient struct {
-		HttpClient http.Client
+		HttpClient HTTPClient
 	}
 
 	PontoMenosHTTPResultWrapper struct {
@@ -26,12 +26,17 @@ type (
 	}
 )
 
+const (
+	REQUEST_TOOK_MESSAGE_TEMPLATE          = "Request took %s for the following url: '%v'"
+	RESPONSE_BODY_IO_COPY_MESSAGE_TEMPLATE = "Could not get response body error: %v"
+)
+
 var (
 	Client HTTPClient
 )
 
 func init() {
-	Client = &PontoMenosHTTPClient{http.Client{}}
+	Client = &PontoMenosHTTPClient{&http.Client{}}
 }
 
 func (pmhc *PontoMenosHTTPClient) Do(req *http.Request) (res *http.Response, err error) {
@@ -39,7 +44,7 @@ func (pmhc *PontoMenosHTTPClient) Do(req *http.Request) (res *http.Response, err
 	res, err = pmhc.HttpClient.Do(req)
 	elapsed := time.Since(start)
 
-	zap.L().Debug(fmt.Sprintf("Request took %s for the following url: '%v'", elapsed, req.URL))
+	zap.L().Debug(fmt.Sprintf(REQUEST_TOOK_MESSAGE_TEMPLATE, elapsed, req.URL))
 
 	return
 }
@@ -60,7 +65,7 @@ func (rw *PontoMenosHTTPResultWrapper) ResponseBody() *bytes.Buffer {
 
 	var b bytes.Buffer
 	if _, err := io.Copy(&b, rw.Response.Body); err != nil {
-		zap.L().Error(fmt.Sprintf("Could not get response body error: %v", err.Error()))
+		zap.L().Error(fmt.Sprintf(RESPONSE_BODY_IO_COPY_MESSAGE_TEMPLATE, err.Error()))
 		return nil
 	}
 
